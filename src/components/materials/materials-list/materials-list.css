@@ -1,0 +1,12 @@
+#materialsListGrid {
+  height: 100%;
+}
+
+#materialsListGrid-mainRow {
+  /* background-color: lightblue; */
+  height: 100%;
+}
+
+.item-buttons-tight {
+  margin-left: 2px;
+}
