@@ -18,18 +18,63 @@ export class MaterialDetail {
       </ion-header>,
       <ion-content padding>
         <ion-grid id='materialFieldsGrid'>
-          <ion-row id='materialFieldsGrid-mainRow'>
-            <ion-col size='8'>
+          <ion-row id='materialDetail-row1' no-padding>
+            <ion-col no-padding sizeLg='4' sizeXs='12'>
+              <ion-card>
+                <ion-card-content>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Description</ion-label>
+                    <ion-input>Lorem ipsum dolor sit amet...</ion-input>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <img src="/assets/images/spool001.png" alt="thumbnail"/>
+                  </ion-item>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col no-padding sizeLg='4' sizeXs='12'>
+              <ion-card>
+                <ion-card-content>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Current Status</ion-label>
+                    <ion-input>Inventory</ion-input>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Statused Via</ion-label>
+                    <ion-input>Automated Zone Rule</ion-input>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Statused On</ion-label>
+                    <ion-input>14 Jan 2019</ion-input>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Previous Status</ion-label>
+                    <ion-input>In Transit</ion-input>
+                  </ion-item>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col no-padding sizeLg='4' sizeXs='12'>
+              <ion-card>
+                <ion-card-content>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Location</ion-label>
+                    <ion-input>Yard 1 / Zone B-3</ion-input>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <img src="/assets/images/map001.png" alt="thumbnail"/>
+                  </ion-item>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row id='materialDetail-row2'>
+            <ion-col sizeLg='8' sizeXs='12'>
 
               <ion-card color='tertiary'>
                 <ion-card-header no-padding color='tertiary'>
                   <ion-toolbar no-padding color='tertiary'>
                     <ion-title slot='start' class='card-header-title'>Catalog Item Detail</ion-title>
-                    <ion-buttons slot='end'>
-                      <ion-button slot='end' class='card-header-button-edit'>
-                        <ion-icon slot='icon-only' name='create'></ion-icon>
-                      </ion-button>
-                    </ion-buttons>
                   </ion-toolbar>
                 </ion-card-header>
                 <ion-card-content>
@@ -47,6 +92,40 @@ export class MaterialDetail {
                     <ion-label position='stacked' class='field-label'>Storage Requirements</ion-label>
                     <ion-input>Not too hot, not too cold</ion-input>
                   </ion-item>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Safety Classification</ion-label>
+                    <ion-input>A51</ion-input>
+                  </ion-item>
+                  <ion-grid no-padding>
+                    <ion-row no-padding>
+                      <ion-col no-padding size='6'>
+                        <ion-item color='tertiary'>
+                          <ion-label position='stacked'>Length</ion-label>
+                          <ion-input>12.5</ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col no-padding size='6'>
+                        <ion-item color='tertiary'>
+                          <ion-label position='stacked'>Width</ion-label>
+                          <ion-input>12.5</ion-input>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row no-padding>
+                      <ion-col no-padding size='6'>
+                        <ion-item color='tertiary'>
+                          <ion-label position='stacked'>Height</ion-label>
+                          <ion-input>12.5</ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col no-padding size='6'>
+                        <ion-item color='tertiary'>
+                          <ion-label position='stacked'>Weight</ion-label>
+                          <ion-input>12.5</ion-input>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
                 </ion-card-content>
               </ion-card>
 
@@ -109,27 +188,8 @@ export class MaterialDetail {
               </ion-card>
 
             </ion-col>
-            <ion-col size='4'>
+            <ion-col sizeLg='4' sizeXs='12'>
             
-              <ion-grid>
-                <ion-row>
-                  <ion-col size='6'>
-                    <ion-card color='tertiary'>
-                      <ion-card-content color='tertiary'>
-                        <img src="/assets/images/spool001.png" alt="thumbnail"/>
-                      </ion-card-content>
-                    </ion-card>
-                  </ion-col>
-                  <ion-col size='6'>
-                    <ion-card color='tertiary'>
-                      <ion-card-content color='tertiary'>
-                        <img src="/assets/images/map001.png" alt="thumbnail"/>
-                      </ion-card-content>
-                    </ion-card>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-
               <ion-card color='tertiary'>
                 <ion-card-header color='tertiary' no-padding>
                   <ion-toolbar no-padding color='tertiary'>
