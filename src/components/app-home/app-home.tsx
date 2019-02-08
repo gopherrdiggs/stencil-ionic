@@ -9,7 +9,8 @@ export class AppHome {
   render() {
     return [
       <ion-header>
-        <ion-toolbar color="primary">
+        <ion-toolbar color="secondary">
+          <ion-title>Home</ion-title>
         </ion-toolbar>
       </ion-header>,
       <ion-content padding>

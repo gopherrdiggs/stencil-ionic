@@ -16,15 +16,14 @@ export namespace Components {
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
-  interface AppProfile {
-    'name': string;
-  }
-  interface AppProfileAttributes extends StencilHTMLAttributes {
-    'name'?: string;
-  }
-
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface LocationDetail {}
+  interface LocationDetailAttributes extends StencilHTMLAttributes {}
+
+  interface LocationsList {}
+  interface LocationsListAttributes extends StencilHTMLAttributes {}
 
   interface MaterialDetail {}
   interface MaterialDetailAttributes extends StencilHTMLAttributes {}
@@ -36,16 +35,18 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'LocationDetail': Components.LocationDetail;
+    'LocationsList': Components.LocationsList;
     'MaterialDetail': Components.MaterialDetail;
     'MaterialsList': Components.MaterialsList;
   }
 
   interface StencilIntrinsicElements {
     'app-home': Components.AppHomeAttributes;
-    'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'location-detail': Components.LocationDetailAttributes;
+    'locations-list': Components.LocationsListAttributes;
     'material-detail': Components.MaterialDetailAttributes;
     'materials-list': Components.MaterialsListAttributes;
   }
@@ -57,16 +58,22 @@ declare global {
     new (): HTMLAppHomeElement;
   };
 
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
-
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
+  };
+
+  interface HTMLLocationDetailElement extends Components.LocationDetail, HTMLStencilElement {}
+  var HTMLLocationDetailElement: {
+    prototype: HTMLLocationDetailElement;
+    new (): HTMLLocationDetailElement;
+  };
+
+  interface HTMLLocationsListElement extends Components.LocationsList, HTMLStencilElement {}
+  var HTMLLocationsListElement: {
+    prototype: HTMLLocationsListElement;
+    new (): HTMLLocationsListElement;
   };
 
   interface HTMLMaterialDetailElement extends Components.MaterialDetail, HTMLStencilElement {}
@@ -83,16 +90,18 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'location-detail': HTMLLocationDetailElement
+    'locations-list': HTMLLocationsListElement
     'material-detail': HTMLMaterialDetailElement
     'materials-list': HTMLMaterialsListElement
   }
 
   interface ElementTagNameMap {
     'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'location-detail': HTMLLocationDetailElement;
+    'locations-list': HTMLLocationsListElement;
     'material-detail': HTMLMaterialDetailElement;
     'materials-list': HTMLMaterialsListElement;
   }

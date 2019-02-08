@@ -10,6 +10,8 @@ export class AppRoot {
     return (
       <ion-router useHash={false}>
         <ion-route url="/" component="app-home" />
+        <ion-route url='/locations' component='locations-list' />
+        <ion-route url='/locations/:id' component='location-detail' />
         <ion-route url='/materials' component='materials-list' />
         <ion-route url='/materials/:id' component='material-detail' />
       </ion-router>
@@ -38,9 +40,9 @@ export class AppRoot {
                 <ion-item>
                   <ion-label color='primary'>WORKSPACES</ion-label>
                 </ion-item>
-                <ion-item button>Locations</ion-item>
-                <ion-item button href='/materials'>Materials</ion-item>
+                <ion-item button href='/locations'>Locations</ion-item>
                 <ion-item button>Material Types</ion-item>
+                <ion-item button href='/materials'>Materials</ion-item>
               </ion-list>
             </ion-content>
             <ion-footer>
