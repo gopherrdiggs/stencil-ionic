@@ -26,6 +26,9 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
+  interface MaterialDetail {}
+  interface MaterialDetailAttributes extends StencilHTMLAttributes {}
+
   interface MaterialsList {}
   interface MaterialsListAttributes extends StencilHTMLAttributes {}
 }
@@ -35,6 +38,7 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'MaterialDetail': Components.MaterialDetail;
     'MaterialsList': Components.MaterialsList;
   }
 
@@ -42,6 +46,7 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'material-detail': Components.MaterialDetailAttributes;
     'materials-list': Components.MaterialsListAttributes;
   }
 
@@ -64,6 +69,12 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLMaterialDetailElement extends Components.MaterialDetail, HTMLStencilElement {}
+  var HTMLMaterialDetailElement: {
+    prototype: HTMLMaterialDetailElement;
+    new (): HTMLMaterialDetailElement;
+  };
+
   interface HTMLMaterialsListElement extends Components.MaterialsList, HTMLStencilElement {}
   var HTMLMaterialsListElement: {
     prototype: HTMLMaterialsListElement;
@@ -74,6 +85,7 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'material-detail': HTMLMaterialDetailElement
     'materials-list': HTMLMaterialsListElement
   }
 
@@ -81,6 +93,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'material-detail': HTMLMaterialDetailElement;
     'materials-list': HTMLMaterialsListElement;
   }
 

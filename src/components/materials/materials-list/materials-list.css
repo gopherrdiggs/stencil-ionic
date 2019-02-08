@@ -1,12 +1,4 @@
-#materialsListGrid {
-  height: 100%;
-}
-
-#materialsListGrid-mainRow {
-  /* background-color: lightblue; */
-  height: 100%;
-}
-
-.item-buttons-tight {
-  margin-left: 2px;
+.button-toolbar-worded {
+  padding-left: 8px;
+  padding-right: 2px;
 }
