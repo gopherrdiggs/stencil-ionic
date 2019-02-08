@@ -49,7 +49,7 @@ export class MaterialDetail {
                 <ion-card-content>
                   <ion-item color='tertiary'>
                     <ion-label position='stacked' class='field-label'>Description</ion-label>
-                    <ion-input>Lorem ipsum dolor sit amet...</ion-input>
+                    <ion-input>Spool w/ T - Flanged - 12.5 x 8.25</ion-input>
                     <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
                       <ion-icon slot='icon-only' name='more'></ion-icon>
                     </ion-button>
@@ -119,7 +119,7 @@ export class MaterialDetail {
                       <ion-col no-padding size='6'>
                         <ion-item color='tertiary'>
                           <ion-label position='stacked' class='field-label'>Width</ion-label>
-                          <ion-input>12.5</ion-input>
+                          <ion-input>8.25</ion-input>
                         </ion-item>
                       </ion-col>
                     </ion-row>
@@ -127,13 +127,13 @@ export class MaterialDetail {
                       <ion-col no-padding size='6'>
                         <ion-item color='tertiary'>
                           <ion-label position='stacked' class='field-label'>Height</ion-label>
-                          <ion-input>12.5</ion-input>
+                          <ion-input>4.75</ion-input>
                         </ion-item>
                       </ion-col>
                       <ion-col no-padding size='6'>
                         <ion-item color='tertiary'>
                           <ion-label position='stacked' class='field-label'>Weight</ion-label>
-                          <ion-input>12.5</ion-input>
+                          <ion-input>28 lbs</ion-input>
                         </ion-item>
                       </ion-col>
                     </ion-row>
