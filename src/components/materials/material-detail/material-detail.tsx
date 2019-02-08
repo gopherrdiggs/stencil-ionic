@@ -17,27 +17,17 @@ export class MaterialDetail {
         </ion-toolbar>
       </ion-header>,
       <ion-content padding>
-        <ion-grid id='materialFieldsGrid'>
-          <ion-row id='materialDetail-row1' no-padding>
+        <ion-grid no-padding id='materialFieldsGrid'>
+          <ion-row no-padding id='materialDetail-row1'>
             <ion-col no-padding sizeLg='4' sizeXs='12'>
-              <ion-card>
-                <ion-card-content>
-                  <ion-item color='tertiary'>
-                    <ion-label position='stacked' class='field-label'>Description</ion-label>
-                    <ion-input>Lorem ipsum dolor sit amet...</ion-input>
-                  </ion-item>
-                  <ion-item color='tertiary'>
-                    <img src="/assets/images/spool001.png" alt="thumbnail"/>
-                  </ion-item>
-                </ion-card-content>
-              </ion-card>
-            </ion-col>
-            <ion-col no-padding sizeLg='4' sizeXs='12'>
-              <ion-card>
+              <ion-card color='tertiary'>
                 <ion-card-content>
                   <ion-item color='tertiary'>
                     <ion-label position='stacked' class='field-label'>Current Status</ion-label>
                     <ion-input>Inventory</ion-input>
+                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
+                      <ion-icon slot='icon-only' name='more'></ion-icon>
+                    </ion-button>
                   </ion-item>
                   <ion-item color='tertiary'>
                     <ion-label position='stacked' class='field-label'>Statused Via</ion-label>
@@ -55,21 +45,43 @@ export class MaterialDetail {
               </ion-card>
             </ion-col>
             <ion-col no-padding sizeLg='4' sizeXs='12'>
-              <ion-card>
+              <ion-card color='tertiary'>
+                <ion-card-content>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Description</ion-label>
+                    <ion-input>Lorem ipsum dolor sit amet...</ion-input>
+                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
+                      <ion-icon slot='icon-only' name='more'></ion-icon>
+                    </ion-button>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <img src="/assets/images/spool001.png" height={197} alt="thumbnail"/>
+                  </ion-item>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col no-padding sizeLg='4' sizeXs='12'>
+              <ion-card color='tertiary'>
                 <ion-card-content>
                   <ion-item color='tertiary'>
                     <ion-label position='stacked' class='field-label'>Location</ion-label>
                     <ion-input>Yard 1 / Zone B-3</ion-input>
+                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
+                      <ion-icon slot='icon-only' name='share-alt'></ion-icon>
+                    </ion-button>
+                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
+                      <ion-icon slot='icon-only' name='more'></ion-icon>
+                    </ion-button>
                   </ion-item>
                   <ion-item color='tertiary'>
-                    <img src="/assets/images/map001.png" alt="thumbnail"/>
+                    <img src="/assets/images/map001.png" height={197} alt="thumbnail"/>
                   </ion-item>
                 </ion-card-content>
               </ion-card>
             </ion-col>
           </ion-row>
-          <ion-row id='materialDetail-row2'>
-            <ion-col sizeLg='8' sizeXs='12'>
+          <ion-row no-padding id='materialDetail-row2'>
+            <ion-col no-padding sizeLg='8' sizeXs='12'>
 
               <ion-card color='tertiary'>
                 <ion-card-header no-padding color='tertiary'>
@@ -100,13 +112,13 @@ export class MaterialDetail {
                     <ion-row no-padding>
                       <ion-col no-padding size='6'>
                         <ion-item color='tertiary'>
-                          <ion-label position='stacked'>Length</ion-label>
+                          <ion-label position='stacked' class='field-label'>Length</ion-label>
                           <ion-input>12.5</ion-input>
                         </ion-item>
                       </ion-col>
                       <ion-col no-padding size='6'>
                         <ion-item color='tertiary'>
-                          <ion-label position='stacked'>Width</ion-label>
+                          <ion-label position='stacked' class='field-label'>Width</ion-label>
                           <ion-input>12.5</ion-input>
                         </ion-item>
                       </ion-col>
@@ -114,13 +126,13 @@ export class MaterialDetail {
                     <ion-row no-padding>
                       <ion-col no-padding size='6'>
                         <ion-item color='tertiary'>
-                          <ion-label position='stacked'>Height</ion-label>
+                          <ion-label position='stacked' class='field-label'>Height</ion-label>
                           <ion-input>12.5</ion-input>
                         </ion-item>
                       </ion-col>
                       <ion-col no-padding size='6'>
                         <ion-item color='tertiary'>
-                          <ion-label position='stacked'>Weight</ion-label>
+                          <ion-label position='stacked' class='field-label'>Weight</ion-label>
                           <ion-input>12.5</ion-input>
                         </ion-item>
                       </ion-col>
@@ -141,16 +153,6 @@ export class MaterialDetail {
                   </ion-toolbar>
                 </ion-card-header>
                 <ion-card-content color='tertiary'>
-                  <ion-item color='tertiary'>
-                    <ion-label position='stacked' class='field-label'>Location</ion-label>
-                    <ion-input>Yard 1 / Zone B-3</ion-input>
-                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
-                      <ion-icon slot='icon-only' name='share-alt'></ion-icon>
-                    </ion-button>
-                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
-                      <ion-icon slot='icon-only' name='more'></ion-icon>
-                    </ion-button>
-                  </ion-item>
                   <ion-item color='tertiary'>
                     <ion-label position='stacked' class='field-label'>Heat Number</ion-label>
                     <ion-input>HEAT-293823</ion-input>
@@ -188,7 +190,7 @@ export class MaterialDetail {
               </ion-card>
 
             </ion-col>
-            <ion-col sizeLg='4' sizeXs='12'>
+            <ion-col no-padding sizeLg='4' sizeXs='12'>
             
               <ion-card color='tertiary'>
                 <ion-card-header color='tertiary' no-padding>
@@ -239,6 +241,14 @@ export class MaterialDetail {
                   <ion-item color='tertiary'>
                     <ion-label position='stacked' class='field-label'>Received By</ion-label>
                     <ion-input>Marvin Smelley</ion-input>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Inspected</ion-label>
+                    <ion-input>15 Jan 2018</ion-input>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Inspected By</ion-label>
+                    <ion-input>John Peebles</ion-input>
                   </ion-item>
                 </ion-card-content>
               </ion-card>
