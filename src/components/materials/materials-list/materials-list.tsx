@@ -11,6 +11,11 @@ export class MaterialsList {
       <ion-header>
         <ion-toolbar color='secondary'>
           <ion-title slot='start'>Materials</ion-title>
+          <ion-buttons slot='end'>
+            <ion-button slot='end' shape='round' fill='solid'>
+              <ion-icon slot='icon-only' name='person' color='secondary'></ion-icon>
+            </ion-button>
+          </ion-buttons>
         </ion-toolbar>
         <ion-toolbar color='tertiary'>
           <ion-button fill='outline' class='button-toolbar-worded'>Create</ion-button>

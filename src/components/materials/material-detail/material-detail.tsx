@@ -11,9 +11,18 @@ export class MaterialDetail {
       <ion-header>
         <ion-toolbar color='secondary'>
           <ion-title>Materials</ion-title>
+          <ion-buttons slot='end'>
+            <ion-button slot='end' shape='round' fill='solid'>
+              <ion-icon slot='icon-only' name='person' color='secondary'></ion-icon>
+            </ion-button>
+          </ion-buttons>
         </ion-toolbar>
         <ion-toolbar color='tertiary'>
           <ion-title>PIPE-001</ion-title>
+          {/* <ion-buttons slot='end'>
+            <ion-button slot='end' fill='outline' color='primary'>Save Changes</ion-button>
+            <ion-button slot='end' fill='clear' color='primary'>Cancel</ion-button>
+          </ion-buttons> */}
         </ion-toolbar>
       </ion-header>,
       <ion-content padding>
