@@ -15,10 +15,10 @@
   color: var(--ion-color-step-500) !important;
 }
 
+.card-header-title {
+  color: var(--ion-color-step-500) !important;
+}
+
 .ion-card-step-50 {
   background-color: var(--ion-color-step-50) !important;
 }
-
-/* .ion-item-step-50 {
-  background-color: var(--ion-color-step-50) !important;
-} */

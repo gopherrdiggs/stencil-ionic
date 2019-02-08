@@ -24,7 +24,7 @@ export class AppRoot {
           <ion-menu>
             <ion-header>
               <ion-toolbar color='secondary'>
-                <ion-title>Jovix Proto</ion-title>
+                <img id='app-logo' src="/assets/images/jovix-logo.svg" height={25} alt="Jovix"/>
               </ion-toolbar>
               <ion-toolbar color='tertiary'>
                 <ion-select value='test' 

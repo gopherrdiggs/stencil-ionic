@@ -56,7 +56,7 @@ export class MaterialDetail {
               <ion-card color='tertiary'>
                 <ion-card-header no-padding color='tertiary'>
                   <ion-toolbar no-padding color='tertiary'>
-                    <ion-title>Section Header</ion-title>
+                    <ion-title class='card-header-title'>Related Entities of Type N</ion-title>
                     <ion-buttons slot='end'>
                       <ion-button shape='round' color='primary'>
                         <ion-icon slot='icon-only' name='add-circle'></ion-icon>
@@ -66,8 +66,14 @@ export class MaterialDetail {
                 </ion-card-header>
                 <ion-card-content>
                   <ion-item color='tertiary'>
-                    <ion-label position='stacked' class='field-label'>Some Field</ion-label>
-                    <ion-input>Field Value</ion-input>
+                    <ion-label position='stacked' class='field-label'>Related Entity Type</ion-label>
+                    <ion-input>Related Entity Name</ion-input>
+                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
+                      <ion-icon slot='icon-only' name='share-alt'></ion-icon>
+                    </ion-button>
+                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
+                      <ion-icon slot='icon-only' name='more'></ion-icon>
+                    </ion-button>
                   </ion-item>
                 </ion-card-content>
               </ion-card>
@@ -91,7 +97,7 @@ export class MaterialDetail {
               <ion-card color='tertiary'>
                 <ion-card-header color='tertiary' no-padding>
                   <ion-toolbar no-padding color='tertiary'>
-                    <ion-title>Auto-Identifiers</ion-title>
+                    <ion-title class='card-header-title'>Auto-Identifiers</ion-title>
                     <ion-buttons slot='end'>
                       <ion-button shape='round' color='primary'>
                         <ion-icon slot='icon-only' name='add-circle'></ion-icon>
