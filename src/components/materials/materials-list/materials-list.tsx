@@ -22,7 +22,7 @@ export class MaterialsList {
       </ion-header>,
       <ion-content padding>
         <ion-list>
-          <ion-item href='/materials/0001'>PIPE-0001</ion-item>
+          <ion-item href='/materials/0002'>PIPE-0001</ion-item>
           <ion-item href='/materials/0002'>PIPE-0002</ion-item>
           <ion-item href='/materials/0003'>PIPE-0003</ion-item>
           <ion-item href='/materials/0001'>PIPE-0001</ion-item>

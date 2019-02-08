@@ -9,6 +9,11 @@
 
 .item-buttons-tight {
   margin-left: 2px;
+  opacity: .5;
+}
+
+.item-buttons-tight:hover {
+  opacity: 1;
 }
 
 .field-label {
@@ -17,6 +22,15 @@
 
 .card-header-title {
   color: var(--ion-color-step-500) !important;
+}
+
+.card-header-button-edit {
+  color: var(--ion-color-step-500) !important;
+  opacity: .2;
+}
+
+.card-header-button-edit:hover {
+  opacity: 1;
 }
 
 .ion-card-step-50 {

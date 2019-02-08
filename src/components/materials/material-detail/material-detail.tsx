@@ -22,9 +22,19 @@ export class MaterialDetail {
             <ion-col size='8'>
 
               <ion-card color='tertiary'>
+                <ion-card-header no-padding color='tertiary'>
+                  <ion-toolbar no-padding color='tertiary'>
+                    <ion-title slot='start' class='card-header-title'>Catalog Item Detail</ion-title>
+                    <ion-buttons slot='end'>
+                      <ion-button slot='end' class='card-header-button-edit'>
+                        <ion-icon slot='icon-only' name='create'></ion-icon>
+                      </ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-card-header>
                 <ion-card-content>
                   <ion-item color='tertiary'>
-                    <ion-label position='stacked' class='field-label'>Catalog Item Name</ion-label>
+                    <ion-label position='stacked' class='field-label'>Name</ion-label>
                     <ion-input>PIPE-001</ion-input>
                     <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
                       <ion-icon slot='icon-only' name='share-alt'></ion-icon>
@@ -41,7 +51,27 @@ export class MaterialDetail {
               </ion-card>
 
               <ion-card color='tertiary'>
+                <ion-card-header no-padding color='tertiary'>
+                  <ion-toolbar no-padding color='tertiary'>
+                    <ion-title slot='start' class='card-header-title'>Material Detail</ion-title>
+                    <ion-buttons slot='end'>
+                      <ion-button slot='end' class='card-header-button-edit'>
+                        <ion-icon slot='icon-only' name='create'></ion-icon>
+                      </ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-card-header>
                 <ion-card-content color='tertiary'>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Location</ion-label>
+                    <ion-input>Yard 1 / Zone B-3</ion-input>
+                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
+                      <ion-icon slot='icon-only' name='share-alt'></ion-icon>
+                    </ion-button>
+                    <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
+                      <ion-icon slot='icon-only' name='more'></ion-icon>
+                    </ion-button>
+                  </ion-item>
                   <ion-item color='tertiary'>
                     <ion-label position='stacked' class='field-label'>Heat Number</ion-label>
                     <ion-input>HEAT-293823</ion-input>
@@ -81,18 +111,24 @@ export class MaterialDetail {
             </ion-col>
             <ion-col size='4'>
             
-              <ion-card color='tertiary'>
-                <ion-card-content color='tertiary'>
-                  <ion-item color='tertiary'>
-                    <ion-label position='stacked' class='field-label'>Received</ion-label>
-                    <ion-input>13 Jan 2018</ion-input>
-                  </ion-item>
-                  <ion-item color='tertiary'>
-                    <ion-label position='stacked' class='field-label'>Received By</ion-label>
-                    <ion-input>Marvin Smelley</ion-input>
-                  </ion-item>
-                </ion-card-content>
-              </ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size='6'>
+                    <ion-card color='tertiary'>
+                      <ion-card-content color='tertiary'>
+                        <img src="/assets/images/spool001.png" alt="thumbnail"/>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+                  <ion-col size='6'>
+                    <ion-card color='tertiary'>
+                      <ion-card-content color='tertiary'>
+                        <img src="/assets/images/map001.png" alt="thumbnail"/>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
 
               <ion-card color='tertiary'>
                 <ion-card-header color='tertiary' no-padding>
@@ -125,6 +161,24 @@ export class MaterialDetail {
                     <ion-button slot='end' fill='clear' color='light' no-padding class='item-buttons-tight'>
                       <ion-icon slot='icon-only' name='more'></ion-icon>
                     </ion-button>
+                  </ion-item>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card color='tertiary'>
+                <ion-card-header no-padding color='tertiary'>
+                  <ion-toolbar no-padding color='tertiary'>
+                    <ion-title slot='start' class='card-header-title'>People &amp; Dates</ion-title>
+                  </ion-toolbar>
+                </ion-card-header>
+                <ion-card-content color='tertiary'>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Received</ion-label>
+                    <ion-input>13 Jan 2018</ion-input>
+                  </ion-item>
+                  <ion-item color='tertiary'>
+                    <ion-label position='stacked' class='field-label'>Received By</ion-label>
+                    <ion-input>Marvin Smelley</ion-input>
                   </ion-item>
                 </ion-card-content>
               </ion-card>
