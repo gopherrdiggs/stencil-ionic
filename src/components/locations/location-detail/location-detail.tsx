@@ -1,10 +1,76 @@
-import { Component } from "@stencil/core";
+import { Component, Listen, State } from "@stencil/core";
 
 @Component({
   tag: 'location-detail',
   styleUrl: 'location-detail.css'
 })
 export class LocationDetail {
+
+  @State() geolocationType: string = 'inherit';
+
+  @Listen('ionChange')
+  handleIonChange(event: any) {
+
+    // if (!event || !event.detail || !event.detail.value) {
+    //   return;
+    // }
+    
+    console.log('ionChange event: ', event);
+
+    this.geolocationType = event.detail.value;
+  }
+
+  renderGeolocationType() {
+
+    console.log('rendering geolocation type ');
+    
+    if (this.geolocationType === 'inherit') {
+      return [
+        <ion-item color='tertiary'>
+          <ion-label class='field-label'>
+            <h2>Coordinates inherited from parent.</h2>
+          </ion-label>
+        </ion-item>
+      ];
+    }
+    else if (this.geolocationType === 'polygon') {
+      return [
+        <ion-list no-padding color='tertiary'>
+          <ion-list-header color='tertiary' class='field-label'>
+            <ion-label>
+              <h2 class='field-label field-label-header'>Polygon/Area Coordinates</h2>
+              <h4 class='field-label'><i>Populate the list below by clicking on the map and selecting the points of the polygon.</i></h4>
+            </ion-label>
+          </ion-list-header>
+          <ion-item color='tertiary'>
+            <ion-button fill='outline'>
+              Clear List
+            </ion-button>
+          </ion-item>
+          <ion-item color='tertiary'>84.23598, -37.23987</ion-item>
+          <ion-item color='tertiary'>84.23600, -37.23703</ion-item>
+        </ion-list>
+      ]
+    }
+    else if (this.geolocationType === 'point') {
+      return [
+        <ion-item color='tertiary'>
+          <ion-label>
+            <h2 class='field-label field-label-header'>Point Coordinates</h2>
+            <h4 class='field-label'>Optionally select coordinates by clicking on the map.</h4>
+          </ion-label>
+        </ion-item>,
+        <ion-item color='tertiary'>
+          <ion-label position='stacked' class='field-label'>Latitude</ion-label>
+          <ion-input></ion-input>
+        </ion-item>,
+        <ion-item color='tertiary'>
+          <ion-label position='stacked' class='field-label'>Longitude</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      ]
+    }
+  }
 
   render() {
     return [
@@ -55,28 +121,15 @@ export class LocationDetail {
                   </ion-item>
                   <ion-item color='tertiary'>
                     <ion-label position='stacked' class='field-label'>Geolocation</ion-label>
-                    <ion-select value='inherit'>
+                    <ion-select value={ this.geolocationType }>
                       <ion-select-option value='inherit'>Inherit from parent</ion-select-option>
                       <ion-select-option value='polygon'>Polygon/Area</ion-select-option>
                       <ion-select-option value='point'>Single Point</ion-select-option>
                     </ion-select>
                   </ion-item>
-                  <ion-item color='tertiary'>
-                    <ion-label position='stacked' class='field-label'>Information</ion-label>
-                    <ion-input><i>Populate the list below by clicking on the map and selecting the points of the polygon.</i></ion-input>
-                  </ion-item>
-                  <ion-list no-padding color='tertiary'>
-                    <ion-list-header color='tertiary' class='field-label'>
-                      <ion-label>Coordinates</ion-label>
-                    </ion-list-header>
-                    <ion-item color='tertiary'>
-                      <ion-button fill='outline'>
-                        Reset
-                      </ion-button>
-                    </ion-item>
-                    <ion-item color='tertiary'>84.23598, -37.23987</ion-item>
-                    <ion-item color='tertiary'>84.23600, -37.23703</ion-item>
-                  </ion-list>
+
+                  { this.renderGeolocationType() }
+
                 </ion-card-content>
               </ion-card>
 
