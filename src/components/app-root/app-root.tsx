@@ -51,13 +51,13 @@ export class AppRoot {
               <ion-item>
                 <ion-label color='primary'>WORKSPACES</ion-label>
               </ion-item>
-              <ion-item button>Material Types</ion-item>
               <ion-item button href='/materials'>Materials</ion-item>
               <ion-item></ion-item>
               <ion-item>
                 <ion-label color='primary'>CONFIGURATION</ion-label>
               </ion-item>
               <ion-item button href='/locations'>Locations</ion-item>
+              <ion-item button href='/material-types'>Material Types</ion-item>
               <ion-item button href='/statuses'>Statuses</ion-item>
             </ion-list>
           </ion-content>
