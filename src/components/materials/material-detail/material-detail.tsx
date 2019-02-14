@@ -8,24 +8,12 @@ export class MaterialDetail {
 
   render() {
     return [
-      <ion-header>
-        <ion-toolbar color='secondary'>
-          <ion-title>Materials</ion-title>
-          <ion-buttons slot='end'>
-            <ion-button slot='end' shape='round' fill='solid'>
-              <ion-icon slot='icon-only' name='person' color='secondary'></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-        <ion-toolbar color='tertiary'>
-          <ion-title>PIPE-001</ion-title>
-          {/* <ion-buttons slot='end'>
-            <ion-button slot='end' fill='outline' color='primary'>Save Changes</ion-button>
-            <ion-button slot='end' fill='clear' color='primary'>Cancel</ion-button>
-          </ion-buttons> */}
-        </ion-toolbar>
-      </ion-header>,
-      <ion-content padding>
+      <app-header header-title='Materials'>
+        <app-subheader slot='secondary-toolbar' 
+                       hasTitle subheaderTitle='PIPE-001'
+                       moreMenuComponent='materials-detail-more-popover' />
+      </app-header>,
+      <ion-content id='materialDetail' padding>
         <ion-grid no-padding id='materialFieldsGrid'>
           <ion-row no-padding id='materialDetail-row1'>
             <ion-col no-padding sizeLg='8' sizeXs='12'>

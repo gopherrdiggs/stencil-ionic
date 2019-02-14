@@ -13,11 +13,31 @@ import 'ionicons';
 
 export namespace Components {
 
+  interface AppHeader {
+    'headerTitle': string;
+  }
+  interface AppHeaderAttributes extends StencilHTMLAttributes {
+    'headerTitle'?: string;
+  }
+
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface AppSubheader {
+    'hasCreate': boolean;
+    'hasTitle': boolean;
+    'moreMenuComponent': string;
+    'subheaderTitle': string;
+  }
+  interface AppSubheaderAttributes extends StencilHTMLAttributes {
+    'hasCreate'?: boolean;
+    'hasTitle'?: boolean;
+    'moreMenuComponent'?: string;
+    'subheaderTitle'?: string;
+  }
 
   interface LocationDetail {}
   interface LocationDetailAttributes extends StencilHTMLAttributes {}
@@ -28,29 +48,44 @@ export namespace Components {
   interface MaterialDetail {}
   interface MaterialDetailAttributes extends StencilHTMLAttributes {}
 
+  interface MaterialsListMorePopover {}
+  interface MaterialsListMorePopoverAttributes extends StencilHTMLAttributes {}
+
   interface MaterialsList {}
   interface MaterialsListAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'AppHeader': Components.AppHeader;
     'AppHome': Components.AppHome;
     'AppRoot': Components.AppRoot;
+    'AppSubheader': Components.AppSubheader;
     'LocationDetail': Components.LocationDetail;
     'LocationsList': Components.LocationsList;
     'MaterialDetail': Components.MaterialDetail;
+    'MaterialsListMorePopover': Components.MaterialsListMorePopover;
     'MaterialsList': Components.MaterialsList;
   }
 
   interface StencilIntrinsicElements {
+    'app-header': Components.AppHeaderAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-root': Components.AppRootAttributes;
+    'app-subheader': Components.AppSubheaderAttributes;
     'location-detail': Components.LocationDetailAttributes;
     'locations-list': Components.LocationsListAttributes;
     'material-detail': Components.MaterialDetailAttributes;
+    'materials-list-more-popover': Components.MaterialsListMorePopoverAttributes;
     'materials-list': Components.MaterialsListAttributes;
   }
 
+
+  interface HTMLAppHeaderElement extends Components.AppHeader, HTMLStencilElement {}
+  var HTMLAppHeaderElement: {
+    prototype: HTMLAppHeaderElement;
+    new (): HTMLAppHeaderElement;
+  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -62,6 +97,12 @@ declare global {
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
+  };
+
+  interface HTMLAppSubheaderElement extends Components.AppSubheader, HTMLStencilElement {}
+  var HTMLAppSubheaderElement: {
+    prototype: HTMLAppSubheaderElement;
+    new (): HTMLAppSubheaderElement;
   };
 
   interface HTMLLocationDetailElement extends Components.LocationDetail, HTMLStencilElement {}
@@ -82,6 +123,12 @@ declare global {
     new (): HTMLMaterialDetailElement;
   };
 
+  interface HTMLMaterialsListMorePopoverElement extends Components.MaterialsListMorePopover, HTMLStencilElement {}
+  var HTMLMaterialsListMorePopoverElement: {
+    prototype: HTMLMaterialsListMorePopoverElement;
+    new (): HTMLMaterialsListMorePopoverElement;
+  };
+
   interface HTMLMaterialsListElement extends Components.MaterialsList, HTMLStencilElement {}
   var HTMLMaterialsListElement: {
     prototype: HTMLMaterialsListElement;
@@ -89,20 +136,26 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'app-header': HTMLAppHeaderElement
     'app-home': HTMLAppHomeElement
     'app-root': HTMLAppRootElement
+    'app-subheader': HTMLAppSubheaderElement
     'location-detail': HTMLLocationDetailElement
     'locations-list': HTMLLocationsListElement
     'material-detail': HTMLMaterialDetailElement
+    'materials-list-more-popover': HTMLMaterialsListMorePopoverElement
     'materials-list': HTMLMaterialsListElement
   }
 
   interface ElementTagNameMap {
+    'app-header': HTMLAppHeaderElement;
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
+    'app-subheader': HTMLAppSubheaderElement;
     'location-detail': HTMLLocationDetailElement;
     'locations-list': HTMLLocationsListElement;
     'material-detail': HTMLMaterialDetailElement;
+    'materials-list-more-popover': HTMLMaterialsListMorePopoverElement;
     'materials-list': HTMLMaterialsListElement;
   }
 

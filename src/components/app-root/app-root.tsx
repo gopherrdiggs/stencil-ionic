@@ -123,6 +123,8 @@ export class AppRoot {
   render() {
     return (
       <ion-app>
+        <ion-toast-controller />
+        <ion-popover-controller />
         { this.configureRoutes() }
 
         <ion-split-pane when='lg'>

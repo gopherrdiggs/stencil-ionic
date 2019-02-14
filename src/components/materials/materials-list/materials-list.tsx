@@ -1,4 +1,4 @@
-import { Component } from "@stencil/core";
+import { Component, State } from "@stencil/core";
 
 @Component({
   tag: 'materials-list',
@@ -6,25 +6,34 @@ import { Component } from "@stencil/core";
 })
 export class MaterialsList {
 
+  @State() viewportLg: boolean = true;
+
+  componentDidLoad() {
+
+    let mmLg = window.matchMedia('(max-width: 700px)');
+    this.handleViewportLgChange(mmLg);
+    mmLg.addListener(this.handleViewportLgChange);
+  }
+
+  handleViewportLgChange(event: any) {
+
+    this.viewportLg = !event.matches;
+    if (this.viewportLg) {
+      console.log('Lg now');
+    }
+    else {
+      console.log('Not Lg');
+    }
+  }
+
+
+
   render() {
     return [
-      <ion-header>
-        <ion-toolbar color='secondary'>
-          <ion-title slot='start'>Materials</ion-title>
-          <ion-buttons slot='end'>
-            <ion-button slot='end' shape='round' fill='solid'>
-              <ion-icon slot='icon-only' name='person' color='secondary'></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-        <ion-toolbar color='tertiary'>
-          <ion-button fill='outline' class='button-toolbar-worded'>Create</ion-button>
-          <ion-button fill='outline' class='button-toolbar-worded'>Bulk Update</ion-button>
-          <ion-button slot='end' fill='clear'>
-            <ion-icon slot='icon-only' name='more'></ion-icon>
-          </ion-button>
-        </ion-toolbar>
-      </ion-header>,
+      <app-header header-title='Materials'>
+        <app-subheader slot='secondary-toolbar' hasCreate={ this.viewportLg }
+                       moreMenuComponent='materials-list-more-popover' />
+      </app-header>,
       <ion-content padding>
         <ion-list>
           <ion-item href='/materials/0002'>PIPE-0001</ion-item>

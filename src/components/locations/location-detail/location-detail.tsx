@@ -74,23 +74,15 @@ export class LocationDetail {
 
   render() {
     return [
-      <ion-header>
-        <ion-toolbar color='secondary'>
-          <ion-title>Locations</ion-title>
-          <ion-buttons slot='end'>
-            <ion-button slot='end' shape='round' fill='solid'>
-              <ion-icon slot='icon-only' name='person' color='secondary'></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-        <ion-toolbar color='tertiary'>
+      <app-header header-title='Locations'>
+        <ion-toolbar slot='secondary-toolbar' color='tertiary'>
           <ion-title>Site 1</ion-title>
           {/* <ion-buttons slot='end'>
             <ion-button slot='end' fill='outline' color='primary'>Save Changes</ion-button>
             <ion-button slot='end' fill='clear' color='primary'>Cancel</ion-button>
           </ion-buttons> */}
         </ion-toolbar>
-      </ion-header>,
+      </app-header>,
       <ion-content padding>
         <ion-grid no-padding id='locationFieldsGrid'>
           <ion-row no-padding id='locationDetail-row1'>

@@ -43,3 +43,22 @@
 .ion-card-step-50 {
   background-color: var(--ion-color-step-50) !important;
 }
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+#materialDetail::-webkit-scrollbar-track {
+  background: blue; 
+  border-radius: 10px;
+}
+
+#materialDetail::-webkit-scrollbar-thumb {
+  background: lightgreen; 
+  border-radius: 10px;
+}
+
+#materialDetail::-webkit-scrollbar-thumb:hover {
+  background: green; 
+}
