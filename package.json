@@ -3,20 +3,17 @@
   "private": true,
   "version": "0.0.1",
   "description": "stencil-ionic-starter",
-  "license": "MIT",
   "files": [
     "dist/"
   ],
   "scripts": {
     "build": "stencil build",
-    "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watch"
+    "start": "stencil build --dev --watch --serve"
   },
   "dependencies": {
-    "@ionic/core": "4.0.0"
+    "@ionic/core": "6.0.5"
   },
   "devDependencies": {
-    "@stencil/core": "0.17.0"
+    "@stencil/core": "2.13.0"
   }
 }
