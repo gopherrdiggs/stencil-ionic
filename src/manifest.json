@@ -1,6 +1,6 @@
 {
-  "name": "stencil-ionic-starter",
-  "short_name": "stencil-ionic-starter",
+  "name": "Stencil Ionic App Starter",
+  "short_name": "App Starter",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
@@ -8,6 +8,6 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#488aff",
-  "theme_color": "#488aff"
+  "background_color": "#16161d",
+  "theme_color": "#16161d"
 }

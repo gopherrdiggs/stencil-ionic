@@ -1,20 +1,28 @@
-import { Component } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'app-home',
-  styleUrl: 'app-home.css'
+  tag: 'app-home'
 })
 export class AppHome {
-
   render() {
     return [
       <ion-header>
-        <ion-toolbar color="secondary">
-          <ion-title>Home</ion-title>
+        <ion-toolbar>
+          <ion-buttons>
+            <ion-button href={'/'}>Home</ion-button>
+          </ion-buttons>
         </ion-toolbar>
       </ion-header>,
-      <ion-content padding>
-        
+      <ion-content>
+        <ion-card>
+          <ion-card-header>Test Card</ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Field</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
       </ion-content>
     ];
   }

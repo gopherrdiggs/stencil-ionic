@@ -1,11 +1,8 @@
 {
-  "name": "stencil-ionic-starter",
+  "name": "test-driver",
   "private": true,
   "version": "0.0.1",
-  "description": "stencil-ionic-starter",
-  "files": [
-    "dist/"
-  ],
+  "description": "Test Driver",
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve"
@@ -14,6 +11,7 @@
     "@ionic/core": "6.0.5"
   },
   "devDependencies": {
-    "@stencil/core": "2.13.0"
+    "@stencil/core": "^2.13.0",
+    "@stencil/router": "^1.0.1"
   }
 }
