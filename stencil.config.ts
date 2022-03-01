@@ -12,8 +12,8 @@ export const config: Config = {
       copy: [
         { src: '_redirects' }
       ],
-      // comment the following line to disable service workers in production
+      // Comment or remove the following line to enable service workers
       serviceWorker: null
     },
-  ],
+  ]
 };
