@@ -9,9 +9,6 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'www',
-      copy: [
-        { src: '_redirects' }
-      ],
       // Comment or remove the following line to enable service workers
       serviceWorker: null
     },

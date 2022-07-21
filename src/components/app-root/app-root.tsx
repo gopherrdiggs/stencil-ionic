@@ -1,14 +1,9 @@
 import { Component, h } from '@stencil/core';
-import { HttpService } from '../../services/http';
 
 @Component({
   tag: 'app-root'
 })
 export class AppRoot {
-
-  async componentWillLoad() {
-    await HttpService.setUrlBase('my.api.mockaroo.com/')
-  }
 
   configureRoutes() {
     return [

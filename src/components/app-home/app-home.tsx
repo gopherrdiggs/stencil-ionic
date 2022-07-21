@@ -1,6 +1,4 @@
 import { Component, h, State } from '@stencil/core';
-import { User } from '../../interfaces/application';
-import { UsersService } from '../../services/users';
 
 @Component({
   tag: 'app-home'
@@ -8,21 +6,22 @@ import { UsersService } from '../../services/users';
 export class AppHome {
 
   @State() fieldValue: string = '';
-  @State() users: User[] = [];
 
   async componentWillLoad() {
-    this.users = await UsersService.getUsers();
+    this.fieldValue = 'Starting value';
   }
 
   async handleButtonClicked() {
-    this.fieldValue = new Date().toLocaleTimeString();
+    const newVal = new Date().toLocaleTimeString();
+    console.log('Updating value...', newVal)
+    this.fieldValue = newVal;
   }
 
   render() {
     return [
       <ion-header>
         <ion-toolbar>
-          <ion-title>StencIonic</ion-title>
+          <ion-title>Stencil/Ionic</ion-title>
           <ion-buttons slot='end'>
             <ion-button href={'/settings'}>Settings</ion-button>
           </ion-buttons>
@@ -30,27 +29,15 @@ export class AppHome {
       </ion-header>,
       <ion-content>
         <ion-card>
-          <ion-card-header>Click 'Update Field' to confirm state updates are working</ion-card-header>
+          <ion-card-header>Clicking 'Update Field' should update the value of the input field</ion-card-header>
           <ion-card-content>
-            <ion-item>
-              <ion-label color='medium'>Field</ion-label>
-              <ion-input value={this.fieldValue} />
-            </ion-item>
             <ion-button onClick={()=>this.handleButtonClicked()}>
               Update Field Value
             </ion-button>
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-header>List of Users</ion-card-header>
-          <ion-card-content>
-            <ion-list>
-              {this.users.map(user =>
-                <ion-item>
-                  <ion-label>{user.first_name} {user.last_name}</ion-label>
-                </ion-item>  
-              )}
-            </ion-list>
+            <ion-item>
+              <ion-label color='medium'>Field</ion-label>
+              <ion-input type='text' value={this.fieldValue} clear-input />
+            </ion-item>
           </ion-card-content>
         </ion-card>
       </ion-content>
